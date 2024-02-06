@@ -273,3 +273,168 @@ True
 >>> True + 4
 5
 >>>
+
+
+String in terminal
+SKY Computer@JAYMAHAKAL MINGW64 /d/python (main)
+$ python
+Python 3.12.1 (tags/v3.12.1:2305ca5, Dec  7 2023, 22:03:25) [MSC v.1937 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> chai = "Lemon Chai"
+>>> chai
+'Lemon Chai'
+>>> print(chai)
+Lemon Chai
+>>> chai = "Masala chai"
+>>> first_char = chai[0]
+>>> print(first_char)
+M   
+>>> chai
+'Masala chai'
+>>> sllice_chai = chai[0:6] 
+>>> print(slice_chai)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'slice_chai' is not defined. Did you mean: 'sllice_chai'?
+>>> print(sllice_chai)
+Masala
+>>> chai[0:6]
+'Masala'
+>>> num_list = "0123456789"
+>>> num_list[:]
+'0123456789'
+>>> num_list[3:]
+'3456789'
+>>> num_list[:7]
+'0123456'
+>>> num_list[0:7:2] 
+'0246'
+>>> num_list[0:7:3] 
+'036'
+>>> num_list[0:7:4] 
+'04'
+>>> num_list[0:7:-4] 
+''
+>>> num_list[0:9:-4] 
+''
+>>> num_list[0:9:4]  
+'048'
+>>> chai
+'Masala chai'
+>>> print(chai.lower()) 
+masala chai
+>>> print(chai.upper()) 
+MASALA CHAI
+>>> chai
+'Masala chai'
+>>> chai = "  Masala Chai   " 
+>>> chai
+'  Masala Chai   '
+>>> print(chai.strip())
+Masala Chai
+>>> chai = "Lemon Chai"
+>>> print(chai.replace("Lemon", "Ginger"))
+Ginger Chai
+>>> chai
+'Lemon Chai'
+>>> chai = "Lemon, Ginger, Masala, Mint"
+>>> print(chai.split()) 
+['Lemon,', 'Ginger,', 'Masala,', 'Mint']
+>>> print(chai.split(", ")) 
+['Lemon', 'Ginger', 'Masala', 'Mint']
+>>> chai = "Masala Chai"
+>>> print(chai.find("chai")) 
+-1
+>>> print(chai.find("Chai") 
+... 
+... 
+KeyboardInterrupt
+>>>
+>>> print(chai.find("Chai"))
+7
+>>> print(chai.find("Chai"))
+7
+>>> chai = "Masala Chai Chai Chai"
+>>> print(chai.count("Chai"))
+3
+>>> chai_type = "Masala"
+>>> quantity = 2
+>>> order = "I ordere {} cups of {} chai"
+>>> order
+'I ordere {} cups of {} chai'
+>>> print(order.format(quantity, chai_type)) 
+I ordere 2 cups of Masala chai
+>>> chai_variety = ["Lemon", "masala", "Ginger"}
+  File "<stdin>", line 1
+    chai_variety = ["Lemon", "masala", "Ginger"}
+                                               ^
+SyntaxError: closing parenthesis '}' does not match opening parenthesis '['
+>>> chai_variety = ["Lemon", "masala", "Ginger"]
+>>> chai_variety
+['Lemon', 'masala', 'Ginger']
+>>> print("".join(chai_variety)) 
+LemonmasalaGinger
+>>> print(" ".join(chai_variety)) 
+Lemon masala Ginger
+>>> print("-".join(chai_variety)) 
+Lemon-masala-Ginger
+>>> print(", ".join(chai_variety)) 
+Lemon, masala, Ginger
+>>> chai
+'Masala Chai Chai Chai'
+>>> chai ="Masala Chai"
+>>> print(len(chai)) 
+11
+>>> chai
+'Masala Chai'
+>>> for letter in chai:
+...     print(letter)
+... 
+M
+a
+s
+a
+l
+a
+
+C
+h
+a
+i
+>>> chai = "He said, \"Masala chai is awesome\" " 
+>>> chai
+'He said, "Masala chai is awesome" '
+>>> chai = "Masala \n chai"
+>>> print(chai)
+Masala 
+ chai
+>>> chai = r"Masla\nchai" 
+>>> print(chai)
+Masla\nchai
+>>> chai = r"c:\user\pwd\" 
+  File "<stdin>", line 1
+    chai = r"c:\user\pwd\"
+           ^
+SyntaxError: unterminated string literal (detected at line 1)
+>>> chai = r"c:\\user\\pwd\\" 
+>>> print(chai)              
+c:\\user\\pwd\\
+>>> chai = r"c:\user\pwd"     
+>>> print(chai)
+c:\user\pwd
+>>> chai = "c:\user\pwd"  
+  File "<stdin>", line 1
+    chai = "c:\user\pwd"
+           ^^^^^^^^^^^^^
+SyntaxError: (unicode error) 'unicodeescape' codec can't decode bytes in position 2-3: truncated \uXXXX escape
+>>> chai = "c:\\user\\pwd" 
+>>> print(chai)
+c:\user\pwd
+>>> chai
+'c:\\user\\pwd'
+>>> chai = "Masala chai"
+>>> print("Masala" in chai) 
+True
+>>> print("Masalaa" in chai) 
+False
+>>>
