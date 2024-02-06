@@ -10,3 +10,7 @@ chai_two = "ginger tea"
 chai_three = "masala chai"
 
 # this is comment
+
+x = 2
+y = 3
+print(x + y)
