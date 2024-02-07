@@ -438,3 +438,170 @@ True
 >>> print("Masalaa" in chai) 
 False
 >>>
+
+
+list in terminal
+
+
+SKY Computer@JAYMAHAKAL MINGW64 /d/python (main)
+$ python
+Python 3.12.1 (tags/v3.12.1:2305ca5, Dec  7 2023, 22:03:25) [MSC v.1937 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> tea_variety = ["Black", "Green", "Oolong", "White"] 
+>>> tea_variety
+['Black', 'Green', 'Oolong', 'White']
+>>> print(tea_variety) 
+['Black', 'Green', 'Oolong', 'White']
+>>> print(tea_variety[1]) 
+Green
+>>> print(tea_variety[-1]) 
+White
+>>> print(tea_variety[1:3]) 
+['Green', 'Oolong']
+>>> print(tea_variety[:2])  
+['Black', 'Green']
+>>> print(tea_variety[2:])  
+['Oolong', 'White']
+>>> tea_variety[3]            
+'White'
+>>> tea_variety[3]= "Herbal"
+>>> print(tea_variety)      
+['Black', 'Green', 'Oolong', 'Herbal']
+>>> tea_variety[1:2]
+['Green']
+>>> tea_variety[1:2] = "Lemon"
+>>> tea_variety
+['Black', 'L', 'e', 'm', 'o', 'n', 'Oolong', 'Herbal']
+>>> tea_variety = ["Black", "Green", "Oolong", "White"]
+>>> tea_variety
+['Black', 'Green', 'Oolong', 'White']
+>>> tea_variety[1:2]
+['Green']
+>>> tea_variety[1:2] = ["Lemon"]
+>>> tea_variety
+['Black', 'Lemon', 'Oolong', 'White']
+>>> tea_variety[1:3]
+['Lemon', 'Oolong']
+>>> tea_variety[1:3] = ["green", "Masala"]
+>>> tea_variety
+['Black', 'green', 'Masala', 'White']
+>>> tea_variety
+['Black', 'green', 'Masala', 'White']
+>>> tea_variety[1:1]
+[]
+>>> tea_variety[1:1] = ["test","test"]
+>>> tea_variety
+['Black', 'test', 'test', 'green', 'Masala', 'White']
+>>> tea_variety[1:2]
+['test']
+>>> tea_variety[1:3]
+['test', 'test']
+>>> tea_variety[1:3] = []
+>>> tea_variety
+['Black', 'green', 'Masala', 'White']
+>>> ^Z
+
+
+SKY Computer@JAYMAHAKAL MINGW64 /d/python (main)
+$ python
+Python 3.12.1 (tags/v3.12.1:2305ca5, Dec  7 2023, 22:03:25) [MSC v.1937 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> tea_variety
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'tea_variety' is not defined
+>>> tea_variety = ["black", "green", "Masala", "White"]
+>>> tea_variety
+['black', 'green', 'Masala', 'White']
+>>> for tea in tea_variety:
+... 
+  File "<stdin>", line 2
+
+    ^
+IndentationError: expected an indented block after 'for' statement on line 1
+>>> for tea in tea_variety:
+...     print(tea)
+... 
+black
+green
+Masala
+White
+>>> for tea in tea_variety:
+...     print(tea, end="-") 
+... 
+black-green-Masala-White->>> 
+>>> tea_variety
+['black', 'green', 'Masala', 'White']
+>>> if "Oolong" in tea_variety
+  File "<stdin>", line 1
+    if "Oolong" in tea_variety
+                              ^
+SyntaxError: expected ':'
+>>> if "Oolong" in tea_variety:
+...     print("I have Oolong tea")
+... 
+>>> tea_variety.append("Oolong")   
+>>> tea_variety                    
+['black', 'green', 'Masala', 'White', 'Oolong']
+>>> if "Oolong" in tea_variety
+  File "<stdin>", line 1
+    if "Oolong" in tea_variety
+                              ^
+SyntaxError: expected ':'
+>>> if "Oolong" in tea_variety:
+...     print("I have Olong Tea")
+... 
+I have Olong Tea
+>>> tea_variety                   
+['black', 'green', 'Masala', 'White', 'Oolong']
+>>> tea_variety.pop()
+'Oolong'
+>>> tea_variety       
+['black', 'green', 'Masala', 'White']
+>>> tea_variety.pop(1:3) 
+  File "<stdin>", line 1
+    tea_variety.pop(1:3)
+                     ^
+SyntaxError: invalid syntax
+>>> tea_variety.remove("green")
+>>> tea_variety
+['black', 'Masala', 'White']
+>>> tea_variety.insert(1, "green")
+>>> tea_variety
+['black', 'green', 'Masala', 'White']
+>>> tea_variety_copy = tea_variety.copy()
+>>> tea_variety_copy
+['black', 'green', 'Masala', 'White']
+>>> tea_variety_copy.append("Lemon")
+>>> tea_variety_copy
+['black', 'green', 'Masala', 'White', 'Lemon']
+>>> tea_variety     
+['black', 'green', 'Masala', 'White']
+>>> squared_nums = [x**2 for x in range(10)]
+>>> range(10)
+range(0, 10)
+>>> print(range(10))
+range(0, 10)
+>>> y = range(10)
+>>> y
+range(0, 10)
+>>> squared_nums = [x**2 for x in range(10)]
+>>> square_nums
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'square_nums' is not defined. Did you mean: 'squared_nums'?
+>>>
+>>> yes
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'yes' is not defined
+>>> square_nums
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'square_nums' is not defined. Did you mean: 'squared_nums'?
+>>> squared_nums
+[0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
+>>> cube_num = [y**3 for y in range(5)]
+>>> cube_num
+[0, 1, 8, 27, 64]
+>>>
