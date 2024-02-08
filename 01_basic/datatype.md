@@ -605,3 +605,161 @@ NameError: name 'square_nums' is not defined. Did you mean: 'squared_nums'?
 >>> cube_num
 [0, 1, 8, 27, 64]
 >>>
+
+dictoniry in terminal
+
+
+SKY Computer@JAYMAHAKAL MINGW64 /d/python (main)
+$ python
+Python 3.12.1 (tags/v3.12.1:2305ca5, Dec  7 2023, 22:03:25) [MSC v.1937 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> chai_types = {"Masala": "Spicy", "Ginger": "Zesty", "Green":"Mild"}} 
+  File "<stdin>", line 1
+    chai_types = {"Masala": "Spicy", "Ginger": "Zesty", "Green":"Mild"}}
+                                                                       ^
+SyntaxError: unmatched '}'
+>>> chai_types = {"Masala": "Spicy", "Ginger": "Zesty", "Green":"Mild"} 
+>>> chai_types
+{'Masala': 'Spicy', 'Ginger': 'Zesty', 'Green': 'Mild'}
+>>> chai_types["Green"]
+'Mild'
+>>> chai_types.get("Ginger")
+'Zesty'
+>>> chai_types               
+{'Masala': 'Spicy', 'Ginger': 'Zesty', 'Green': 'Mild'}
+>>> chai_types["Green"] = "Fresh"
+>>> chai_types
+{'Masala': 'Spicy', 'Ginger': 'Zesty', 'Green': 'Fresh'}
+>>> for chai in chai_types:
+...     print(chai)
+... 
+Masala
+Ginger
+Green 
+>>> for chai in chai_types:
+...     print(chai, chai_types[chai])
+... 
+Masala Spicy
+Ginger Zesty
+Green Fresh 
+>>> for key, values  in chai_types.items():
+...     print(key, value)
+... 
+Traceback (most recent call last):
+  File "<stdin>", line 2, in <module>
+NameError: name 'value' is not defined. Did you mean: 'values'?
+>>> for key, value  in chai_types.items():  
+...     print(key, value)
+... 
+Masala Spicy
+Ginger Zesty
+Green Fresh
+>>> if "Masala" in chai_types:
+...     print("I have masala chai")
+... 
+I have masala chai
+>>> print(len(chai_types))
+3
+>>> chai_types
+{'Masala': 'Spicy', 'Ginger': 'Zesty', 'Green': 'Fresh'}
+>>> chai_types["Earl Grey"] = "Citrus"
+>>> chai_types
+{'Masala': 'Spicy', 'Ginger': 'Zesty', 'Green': 'Fresh', 'Earl Grey': 'Citrus'}
+>>> chai_types.pop("Ginger") 
+'Zesty'
+>>> chai_types
+{'Masala': 'Spicy', 'Green': 'Fresh', 'Earl Grey': 'Citrus'}
+>>> chai_types.popitem()              
+('Earl Grey', 'Citrus')
+>>> chai_types
+{'Masala': 'Spicy', 'Green': 'Fresh'}
+>>> del chai_types["Green"]
+>>> chai_types
+{'Masala': 'Spicy'}
+>>> chai_types_copy = chai_types.copy() 
+>>> tea_shop = {
+... "chai": {"Masla": "Spicy", "Ginger": "Zesty"}, 
+... "tea": {"Green":"MIld", "Black":"Strong}
+  File "<stdin>", line 3
+    "tea": {"Green":"MIld", "Black":"Strong}
+                                    ^
+SyntaxError: unterminated string literal (detected at line 3)
+>>> "tea": {"Green":"MIld", "Black": "Strong} 
+  File "<stdin>", line 1
+    "tea": {"Green":"MIld", "Black": "Strong}
+                                     ^
+SyntaxError: unterminated string literal (detected at line 1)
+>>> "tea": {"Green":"MIld", "Black": "Strong"} 
+  File "<stdin>", line 1
+    "tea": {"Green":"MIld", "Black": "Strong"}
+    ^^^^^
+SyntaxError: illegal target for annotation
+>>> "tea": {"Green":"MIld", "Black": "Strong"} 
+  File "<stdin>", line 1
+    "tea": {"Green":"MIld", "Black": "Strong"}
+    ^^^^^
+SyntaxError: illegal target for annotation
+>>>  tea_shop = {
+  File "<stdin>", line 1
+    tea_shop = {
+IndentationError: unexpected indent
+>>> ... "chai": {"Masla": "Spicy", "Ginger": "Zesty"},
+  File "<stdin>", line 1
+    ... "chai": {"Masla": "Spicy", "Ginger": "Zesty"},
+        ^^^^^^
+SyntaxError: invalid syntax
+>>> ... "tea": {"Green":"MIld", "Black":"Strong}
+  File "<stdin>", line 1
+    ... "tea": {"Green":"MIld", "Black":"Strong}
+        ^^^^^
+SyntaxError: invalid syntax
+>>> ... "tea" : {"Green":"MIld", "Black":"Strong} 
+  File "<stdin>", line 1
+    ... "tea" : {"Green":"MIld", "Black":"Strong}
+        ^^^^^
+SyntaxError: invalid syntax
+>>> ... "chai": {"Masla": "Spicy", "Ginger": "Zesty"}, 
+  File "<stdin>", line 1
+    ... "chai": {"Masla": "Spicy", "Ginger": "Zesty"},
+        ^^^^^^
+SyntaxError: invalid syntax
+>>> tea_shop = {
+... "chai": {"Masla": "Spicy", "Ginger": "Zesty"},
+... "Tea": {"Green": "Mild", "Black": "Strong"}
+... }
+>>> tea_shop    
+{'chai': {'Masla': 'Spicy', 'Ginger': 'Zesty'}, 'Tea': {'Green': 'Mild', 'Black': 'Strong'}}
+>>> print(tea_shop)
+{'chai': {'Masla': 'Spicy', 'Ginger': 'Zesty'}, 'Tea': {'Green': 'Mild', 'Black': 'Strong'}}
+>>> tea_shop["chai"] 
+{'Masla': 'Spicy', 'Ginger': 'Zesty'}
+>>> tea_shop["chai"]["Giger"]
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+KeyError: 'Giger'
+>>> tea_shop["chai"]["Ginger"] 
+'Zesty'
+>>> squared_nums = {x:x**2 for x in range(6)} 
+>>> print(square_nums)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'square_nums' is not defined. Did you mean: 'squared_nums'?
+>>> print(squared_nums) 
+{0: 0, 1: 1, 2: 4, 3: 9, 4: 16, 5: 25}
+>>> squared_nums.clear()                     
+>>> squared_nums        
+{}
+>>> keys = ["masla", "Ginger", "LEmon"]
+>>> keys
+['masla', 'Ginger', 'LEmon']
+>>> default_vlaue = "Delicious"
+>>> new_dict = dict.fromkeys(keys, default_vlaue)
+>>> new_dict
+{'masla': 'Delicious', 'Ginger': 'Delicious', 'LEmon': 'Delicious'}
+>>> new_dict = dict,fromkeys(keys, keys)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'fromkeys' is not defined
+>>> new_dict = dict.fromkeys(keys, keys) 
+>>> new_dict
+{'masla': ['masla', 'Ginger', 'LEmon'], 'Ginger': ['masla', 'Ginger', 'LEmon'], 'LEmon': ['masla', 'Ginger', 'LEmon']}
