@@ -763,3 +763,52 @@ NameError: name 'fromkeys' is not defined
 >>> new_dict = dict.fromkeys(keys, keys) 
 >>> new_dict
 {'masla': ['masla', 'Ginger', 'LEmon'], 'Ginger': ['masla', 'Ginger', 'LEmon'], 'LEmon': ['masla', 'Ginger', 'LEmon']}
+
+
+
+
+turple in terminal
+
+
+
+$ python
+Python 3.12.1 (tags/v3.12.1:2305ca5, Dec  7 2023, 22:03:25) [MSC v.1937 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> tea_types = ("Blzck", "Green", "Ginger", "Oolong") 
+>>> tea_types
+('Blzck', 'Green', 'Ginger', 'Oolong')
+>>> tea_types[0]
+'Blzck'
+>>> tea_types[-1] 
+'Oolong'
+>>> tea_types[0] = "Lemon"
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: 'tuple' object does not support item assignment
+>>> len(tea_types)
+4   
+>>> more_tea = ("Herbal", "Earl Grey")
+>>> all_tea = more_tea + tea_types
+>>> all_tea                       
+('Herbal', 'Earl Grey', 'Blzck', 'Green', 'Ginger', 'Oolong')
+>>> if"Green" in all_tea:
+...     print("I have green tea")
+... 
+I have green tea
+>>> more_tea = ("Herbal", "Earl Gray", "Herbal")
+>>> more_tea.count("Herbal")
+2   
+>>> tea_types
+('Blzck', 'Green', 'Ginger', 'Oolong')
+>>> (black, green, oolong) = tea_types
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ValueError: too many values to unpack (expected 3)
+>>> (black, green, oolong, lemon) = tea_types
+>>> black
+'Blzck'
+>>> green
+'Green'
+>>> type(tea_types) 
+<class 'tuple'>
+>>>
